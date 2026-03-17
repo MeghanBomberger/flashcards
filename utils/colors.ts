@@ -15,9 +15,9 @@ export const colors: Colors = {
     blue: 'rgb(84, 205, 242)',
   },
   icons: {
-    iconBlue: '#4a88da', // not used in LogoIcon, but keep
+    iconBlue: '#4a88da',
     iconLightBlue: '#5e9cea',
-    iconDark: '#262626', // not used in LogoIcon, but keep
+    iconDark: '#262626',
     logoBlack: '#2b2b2b',
     logoBlue: '#1697c9',
     logoPurple: '#bd2bb5',
