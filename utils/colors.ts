@@ -26,5 +26,8 @@ export const colors: Colors = {
   },
   text: {
     pencilDark: 'rgba(50, 50, 50, 0.95)',
+    pencilMedium: 'rgb(120, 120, 120)',
+    penRed: 'rgb(205, 0, 50)',
+    highlighterBlue: 'rgb(84, 205, 242)',
   },
 };
