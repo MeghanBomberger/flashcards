@@ -1,4 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useFonts as usePermanentMarker, PermanentMarker_400Regular } from '@expo-google-fonts/permanent-marker';
+import { useFonts as useIndieFlower, IndieFlower_400Regular } from '@expo-google-fonts/indie-flower';
+import { useFonts as useAmaticSC, AmaticSC_400Regular, AmaticSC_700Bold } from '@expo-google-fonts/amatic-sc';
+import { useFonts as useQuicksand, Quicksand_400Regular, Quicksand_700Bold } from '@expo-google-fonts/quicksand';
+import { useFonts as useAbel, Abel_400Regular } from '@expo-google-fonts/abel';
+import { useFonts as useSatisfy, Satisfy_400Regular } from '@expo-google-fonts/satisfy';
+import { useFonts as useShadowsIntoLight, ShadowsIntoLight_400Regular } from '@expo-google-fonts/shadows-into-light';
 import { View, TextInput, ScrollView, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import { Storage } from './storage';
 import AppBackground from './components/AppBackground';
@@ -15,6 +22,18 @@ function Item({ item, onPress }) {
 }
 
 export default function App() {
+  const [permanentMarkerLoaded] = usePermanentMarker({ PermanentMarker_400Regular });
+  const [indieFlowerLoaded] = useIndieFlower({ IndieFlower_400Regular });
+  const [amaticSCLoaded] = useAmaticSC({ AmaticSC_400Regular, AmaticSC_700Bold });
+  const [quicksandLoaded] = useQuicksand({ Quicksand_400Regular, Quicksand_700Bold });
+  const [abelLoaded] = useAbel({ Abel_400Regular });
+  const [satisfyLoaded] = useSatisfy({ Satisfy_400Regular });
+  const [shadowsIntoLightLoaded] = useShadowsIntoLight({ ShadowsIntoLight_400Regular });
+
+  const fontsLoaded = permanentMarkerLoaded && indieFlowerLoaded && amaticSCLoaded && quicksandLoaded && abelLoaded && satisfyLoaded && shadowsIntoLightLoaded;
+  if (!fontsLoaded) {
+    return <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Loading fonts...</Text></View>;
+  }
   const [text, setText] = useState('');
   const [items, setItems] = useState([]);
 

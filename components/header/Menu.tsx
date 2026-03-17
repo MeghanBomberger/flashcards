@@ -16,7 +16,7 @@ export default function Menu({ isMenuOpen, setIsMenuOpen }: MenuProps) {
   return (
     <Animated.View style={[styles.menuContainer, { right: isMenuOpen ? 0 : -400 }]}
       pointerEvents={isMenuOpen ? 'auto' : 'none'}>
-      <View style={[styles.menu, { transform: [{ rotate: isMenuOpen ? '-17.5deg' : '0deg' }] }]}> 
+      <View style={[styles.menu, { transform: [{ rotate: isMenuOpen ? '-17.5deg' : '0deg' }] }]}>
         <TouchableOpacity onPress={handleLogout}>
           <Text style={styles.menuText}>LOGOUT</Text>
         </TouchableOpacity>
