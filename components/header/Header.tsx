@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     height: 64,
     paddingVertical: 16,
     paddingHorizontal: 8,
-    backgroundColor: colors.bgPaper,
+    backgroundColor: colors.background.bgPaper,
   },
   cornerIcon: {
     flex: 0,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 32,
-    color: colors.pencilDark,
+    color: colors.text.pencilDark,
     paddingLeft: 24,
     textAlign: 'left',
     fontWeight: 'bold',
