@@ -4,4 +4,5 @@ export const colors = {
 	holeBlue: 'rgb(75, 75, 100)',
 	lineBlue: 'rgba(0, 150, 200, 0.5)',
 	shadow: 'rgba(0,0,0,0.25)',
+	pencilDark: 'rgba(50, 50, 50, 0.95)',
 };
