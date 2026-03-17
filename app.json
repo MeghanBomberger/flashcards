@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "expo-sqlite"
+  ],
+  "expo": {
+    "name": "flashcards",
+    "slug": "flashcards"
+  }
+}
