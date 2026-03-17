@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { colors } from '../../utils/colors';
-import WriteCardIcon from '../../../assets/images/005-draw.svg';
-import CardLibraryIcon from '../../assets/images/018-layers.svg';
-import UserIcon from '../../assets/images/user.svg';
+import { WriteCardIcon } from '../icons/WriteCardIcon';
+import { CardLibraryIcon } from '../icons/CardLibraryIcon';
+import { UserIcon } from '../icons/UserIcon';
 
 interface NavBarProps {
   isMenuOpen: boolean;
@@ -28,17 +28,11 @@ export default function NavBar({ isMenuOpen, setIsMenuOpen }: NavBarProps) {
     <View style={styles.navbarContainer}>
       {navList.map(navLink => (
         <TouchableOpacity key={navLink.name}>
-          <Image
-            style={styles.navIcon}
-            source={navLink.icon}
-          />
+          <navLink.icon />
         </TouchableOpacity>
       ))}
       <TouchableOpacity onPress={() => setIsMenuOpen(!isMenuOpen)}>
-        <Image
-          style={[styles.navIcon, { marginTop: 24, tintColor: colors.pencilDark }]}
-          source={UserIcon}
-        />
+        <UserIcon />
       </TouchableOpacity>
     </View>
   );
