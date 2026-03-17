@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Menu from './Menu';
 import NavBar from './NavBar';
 import { colors } from '../../utils/colors';
-import defaultLogo from '../../assets/images/logo.png';
+import { LogoIcon } from '../icons/LogoIcon';
 
 interface HeaderProps {
   title?: string;
@@ -18,11 +18,15 @@ export default function Header({ title, cornerIcon }: HeaderProps) {
       <View style={styles.headerContainer}>
         <View style={styles.cornerIcon}>
           <TouchableOpacity>
-            <Image
-              alt="home"
-              style={styles.headerLogo}
-              source={cornerIcon ? cornerIcon : defaultLogo}
-            />
+            {cornerIcon ? (
+              <Image
+                alt="home"
+                style={styles.headerLogo}
+                source={cornerIcon}
+              />
+            ) : (
+              <LogoIcon size={40} />
+            )}
           </TouchableOpacity>
         </View>
         <View style={styles.headerMain}>
