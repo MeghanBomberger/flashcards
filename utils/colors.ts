@@ -10,4 +10,10 @@ export const colors = {
 	shadow: 'rgba(0,0,0,0.25)',
 	pencilDark: 'rgba(50, 50, 50, 0.95)',
 	yellowStickyNote: 'rgb(248, 229, 58)',
+	cardLibraryBlue: '#4a88da',
+	cardLibraryLightBlue: '#5e9cea',
+	cardLibraryDark: '#262626',
+	writeCardBlue: '#4a88da',
+	userIconBlue: '#4a88da',
+	userIconLightBlue: '#5e9cea',
 };

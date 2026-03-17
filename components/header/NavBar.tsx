@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { colors } from '../../utils/colors';
-import CardLibraryIcon from '../../assets/svg/sketch-style/018-layers.png';
-import UserIcon from '../../assets/svg/sketch-style/user.png';
-import WriteCardIcon from '../../assets/svg/sketch-style/005-draw.png';
+import WriteCardIcon from '../../../assets/images/005-draw.svg';
+import CardLibraryIcon from '../../assets/images/018-layers.svg';
+import UserIcon from '../../assets/images/user.svg';
 
 interface NavBarProps {
   isMenuOpen: boolean;
